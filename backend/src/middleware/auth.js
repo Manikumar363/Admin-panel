@@ -10,7 +10,7 @@ const protect = async (req, res, next) => {
     }
 
     if (!token) {
-      return res.status(401).json({ message: 'Not authorized to access this route' });
+      return res.status(401).json({ message: 'Not authorized this route' });
     }
 
     const decoded = jwt.verify(token, process.env.JWT_SECRET);
