@@ -15,7 +15,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 
-// MongoDB connection
+
 const MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost:27017/admin-panel';
 mongoose.connect(MONGODB_URI)
   .then(() => console.log('Connected to MongoDB'))
